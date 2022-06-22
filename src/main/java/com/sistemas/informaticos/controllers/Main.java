@@ -19,18 +19,12 @@ public class Main {
 
     @GetMapping("/")
     public String inicio() {
-        return "Mi servidor backend examen";
+        return "Mi servidor backend examen utiliza /contar/{palabra} para mostrar cuantas A tiene y /elevacion/{lugar} para saber la elevacion en metros de un lugar";
     }
-    /*
-     * 
-    @GetMapping("/coincidencias")
-    public String concideLetras(@RequestParam String nombre1, @RequestParam String nombre2) {
-        return nombre1 + nombre2 + " tienen " + Utils.calculaCoincidencias(nombre1, nombre2) + " letras en comun";
-    }
-   */ 
+    
   @GetMapping("/contar/{palabra}")
     public String cuentaletras(@PathVariable String palabra) {
-        return palabra + " tiene " + Utils.cuentaLetraA(palabra);
+        return palabra + " tiene " + Utils.cuentaLetraA(palabra) + " letras A ";
     }
 
     @GetMapping("/elevacion/{lugar}")
