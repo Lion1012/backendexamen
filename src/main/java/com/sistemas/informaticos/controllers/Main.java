@@ -25,14 +25,7 @@ public class Main {
     public String concideLetras(@RequestParam String nombre1, @RequestParam String nombre2) {
         return nombre1 + nombre2 + " tienen " + Utils.calculaCoincidencias(nombre1, nombre2) + " letras en comun";
     }
-    /*
-     *  @GetMapping("/habitantes/{lugar}")
-    public String getPopulation(@PathVariable String lugar){
-        Results results = populationService.getPopulation(lugar);
-        return results.results[0].population + "habitantes";
-    }
-}
-     */
+    
     @GetMapping("/elevacion/{lugar}")
     public String getElevation(@PathVariable String elevacion){
         Results results = elevationService.getPopulation(elevacion);
